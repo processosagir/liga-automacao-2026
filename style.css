@@ -1,0 +1,256 @@
+:root {
+    --pk-red: #dc0a2d;
+    --pk-dark-red: #8b0000;
+    --pk-orange: #ff9900;
+    --pk-green: #4dad5b;
+}
+
+/* 1. CORREÇÃO GLOBAL: Impede que bordas empurrem o layout para fora */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a1a;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pokedex-frame {
+    width: 98vw;
+    height: 95vh;
+    background: var(--pk-red);
+    border: 10px solid var(--pk-dark-red);
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cabeçalho Centralizado */
+.mci-header {
+    background: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 5px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.header-icon {
+    height: 80px;
+    width: auto;
+}
+
+.pokeball {
+    animation: spin 5s linear infinite;
+}
+
+.pikachu-main {
+    transform: scaleX(-1);
+}
+
+.mci-text-center h1 {
+    font-family: 'Press Start 2P';
+    font-size: 1.4rem;
+    color: var(--pk-red);
+    margin: 0 0 10px 0;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 15px;
+    flex: 1;
+    min-height: 0;
+}
+
+/* 2. CORREÇÃO DA BORDA: Adicionado padding e overflow hidden */
+.journey-map {
+    background: white;
+    border-radius: 20px;
+    border: 5px solid #333;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. CORREÇÃO DO SCROLL: Container interno para o grid */
+.gyms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.gyms-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gyms-grid::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.gym-card {
+    border: 3px solid #eee;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+}
+
+.gym-card.locked {
+    opacity: 0.2;
+    filter: grayscale(100%);
+}
+
+.gym-card img {
+    height: 130px;
+    margin-bottom: 10px;
+}
+
+/* Sidebar e Cards */
+.status-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 0;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    border: 5px solid #333;
+    padding: 15px;
+}
+
+.hp-header {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os elementos na horizontal */
+    align-items: center;
+    /* Centraliza os elementos na vertical */
+    flex-wrap: wrap;
+    /* Permite que quebre linha se o box for pequeno */
+    gap: 15px;
+    /* Espaço entre o título e a tag */
+    margin-bottom: 12px;
+    /* Afasta do elemento de baixo */
+}
+
+.hp-bar-container {
+    background: #333;
+    height: 35px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #333;
+}
+
+.hp-bar-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 1.5s, background-color 0.5s;
+}
+
+.target-line {
+    position: absolute;
+    left: 12.5%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    z-index: 2;
+}
+
+.hp-label {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.meta-txt {
+    color: var(--pk-orange);
+}
+
+/* TAG CENTRALIZADA: Adicionado Flexbox para alinhar o texto internamente */
+.status-badge {
+    display: flex;
+    /* Garante centralização interna do texto */
+    align-items: center;
+    /* Centraliza verticalmente o texto */
+    justify-content: center;
+    /* Centraliza horizontalmente o texto */
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    font-family: 'Press Start 2P';
+    color: white;
+    min-height: 32px;
+    /* Mantém altura consistente */
+    width: fit-content;
+    /* Ajusta a largura ao texto */
+    margin: 5px auto 10px auto;
+    /* Centraliza na horizontal (auto) e afasta do topo (5px) e da barra (10px) */
+    position: relative;
+    /* Para ajudar no alinhamento final */
+}
+
+.pokedex-card {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.captured-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.captured-slot {
+    width: 60px;
+    height: 60px;
+    background: #f0f0f0;
+    border: 3px solid #ffcb05;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.captured-slot img {
+    width: 50px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--pk-dark-red);
+    font-size: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
