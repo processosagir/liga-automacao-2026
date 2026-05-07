@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>Liga Pokémon da Automação 2026</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="pokedex-frame">
         <header class="mci-header">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
-                class="header-icon pokeball">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" class="header-icon pokeball">
             <div class="mci-text-center">
                 <h1>LIGA DA AUTOMAÇÃO 2026</h1>
                 <p>MCI: Automação de processos elegíveis de 0% para 100% até 30/11/2026</p>
             </div>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
-                class="header-icon pikachu-main">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" class="header-icon pikachu-main">
         </header>
 
         <div class="main-content">
@@ -32,7 +27,7 @@
                 <div class="card md-card">
                     <h3>MEDIDA DE DIREÇÃO (MD)</h3>
                     <div class="md-content">
-                        <p>Reunir com equipes para validação e levantamento de requisitos!</p>
+                        <p id="md-desc">Sincronizando...</p>
                     </div>
                 </div>
 
@@ -43,10 +38,9 @@
                     </div>
                     <div class="hp-bar-container">
                         <div class="hp-bar-fill" id="hp-fill"></div>
-                        <div class="target-line" title="Meta: 25%"></div>
+                        <div class="target-line" id="target-line" title="Meta: 25%"></div>
                     </div>
-                    <div class="hp-label">ATUAL: <span id="current-pct">0%</span> | META: <span
-                            class="meta-txt">12.5%</span></div>
+                    <div class="hp-label">ATUAL: <span id="current-pct">0%</span> | META: <span class="meta-txt" id="meta-txt">25%</span></div>
                 </div>
 
                 <div class="card pokedex-card">
@@ -58,5 +52,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
