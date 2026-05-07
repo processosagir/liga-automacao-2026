@@ -2,7 +2,7 @@
 // CONFIGURAÇÕES DA JORNADA POKÉMON (LIGA 2026)
 // ==========================================
 let metaAtual = 0;
-let metaEsperada = 12.5;
+let metaEsperada = 25;
 
 const jornada = [
     { nome: "Início (Abril)", range: [0, 12.5], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" },
