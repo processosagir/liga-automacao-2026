@@ -15,13 +15,13 @@ const jornada = [
 function calcularMetaEsperada() {
     const hoje = new Date();
     const cronograma = [
-        { data: new Date(2026, 4, 4), valor: 12.5 },
+        { data: new Date(2026, 4, 4), valor: 13 },
         { data: new Date(2026, 5, 1), valor: 25 },
-        { data: new Date(2026, 6, 6), valor: 37.5 },
+        { data: new Date(2026, 6, 6), valor: 38 },
         { data: new Date(2026, 7, 3), valor: 50 },
-        { data: new Date(2026, 8, 7), valor: 62.5 },
+        { data: new Date(2026, 8, 7), valor: 63 },
         { data: new Date(2026, 9, 5), valor: 75 },
-        { data: new Date(2026, 10, 2), valor: 87.5 },
+        { data: new Date(2026, 10, 2), valor: 88 },
         { data: new Date(2026, 10, 30), valor: 100 }
     ];
     for (let marco of cronograma) {
