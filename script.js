@@ -2,14 +2,14 @@ let metaAtual = 0;
 let metaEsperada = 25;
 
 const jornada = [
-    { nome: "Início (Abril)", range: [0, 12.5], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" },
-    { nome: "Ginásio Pedra (Maio)", range: [12.5, 25], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png" },
-    { nome: "Ginásio Água (Junho)", range: [25, 37.5], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/120.png" },
-    { nome: "Ginásio Trovão (Julho)", range: [37.5, 50], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/125.png" },
-    { nome: "Ginásio Planta (Agosto)", range: [50, 62.5], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/114.png" },
-    { nome: "Ginásio Psíquico (Setembro)", range: [62.5, 75], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/64.png" },
-    { nome: "Ginásio Fogo (Outubro)", range: [75, 87.5], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/126.png" },
-    { nome: "LIGA POKÉMON (Novembro)", range: [87.5, 100], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png" }
+    { nome: "Início (Abril)", range: [0, 13], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" },
+    { nome: "Ginásio Pedra (Maio)", range: [13, 25], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/74.png" },
+    { nome: "Ginásio Água (Junho)", range: [25, 38], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/120.png" },
+    { nome: "Ginásio Trovão (Julho)", range: [38, 50], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/125.png" },
+    { nome: "Ginásio Planta (Agosto)", range: [50, 63], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/114.png" },
+    { nome: "Ginásio Psíquico (Setembro)", range: [63, 75], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/64.png" },
+    { nome: "Ginásio Fogo (Outubro)", range: [75, 88], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/126.png" },
+    { nome: "LIGA POKÉMON (Novembro)", range: [88, 100], img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png" }
 ];
 
 function calcularMetaEsperada() {
